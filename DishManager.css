@@ -1,0 +1,36 @@
+table{
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+td{
+    padding: 20px;
+    border-radius: 9px;
+    background: linear-gradient(to top,#A0A0A0,#FFF 75%,#6186D5);
+}
+
+tr{
+    background-color: #343;
+}
+
+.dishImage{
+    width: 200;
+    height: 200;
+}
+
+.checkboxInput{
+    width: 25px;
+    height: 25px;
+}
+
+body{
+    background-color: #E4F0ED;
+}
+
+.totalPrice{
+    margin-left: 50%;
+    background-color: #E0E0E0;
+    padding: 10px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 6px 4px #FFF;
+}

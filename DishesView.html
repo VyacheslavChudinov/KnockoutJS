@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="DishManager.css">
+</head>
+<body>
+    <span class="totalPrice">
+        <label>Total: </label><label data-bind="text: total"></label>
+    </span>
+    <table data-bind="foreach: dishes">
+        <tr>
+            <td>
+                <label data-bind="text: name"></label>
+            </td>
+            <td>
+                <label data-bind="text: price"></label>
+            </td>
+            <td>
+                <label data-bind="text: imageURL"></label>
+            </td>
+            <td >
+                <label data-bind="text: isChecked"></label>
+            </td>
+            <td>
+                <input class="checkboxInput" type="checkbox" data-bind="checked: isChecked"/>
+            </td>
+        </tr>
+    </table>
+
+
+</body>
+</html>
+
+<script src="knockout-3.1.0.js"></script>
+<script src="Dish.js"></script>
+<script src="DishManager.js"></script>
