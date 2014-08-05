@@ -42,7 +42,7 @@ function dishesViewModel() {
             result += +(dish.isChecked() ? dish.price : 0);
         }
         return result;
-    })
+    });
 }
 ko.applyBindings( new dishesViewModel() );
 

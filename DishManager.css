@@ -6,11 +6,6 @@ table{
 td{
     padding: 20px;
     border-radius: 9px;
-    background: linear-gradient(to top,#A0A0A0,#FFF 75%,#6186D5);
-}
-
-tr{
-    background-color: #343;
 }
 
 .dishImage{
@@ -18,13 +13,13 @@ tr{
     height: 200;
 }
 
-.checkboxInput{
+.checkBoxInput{
     width: 25px;
     height: 25px;
 }
 
 body{
-    background-color: #E4F0ED;
+   background-color: #E4F0ED;
 }
 
 .totalPrice{
