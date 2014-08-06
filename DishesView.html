@@ -6,33 +6,39 @@
     <link rel="stylesheet" href="DishManager.css">
 </head>
 <body>
-    <span class="totalPrice">
-        <label>Total: </label><label data-bind="text: total"></label>
-    </span>
+
     <table data-bind="foreach: dishes">
         <tr data-bind="style: {'background-color': isChecked() ? '#666' : '#d0bffd'}">
             <td >
                 <label data-bind="text: name"></label>
             </td>
             <td>
-                <label data-bind="text: price"></label>
+                <label data-bind="text: price, customBinding: isChecked"></label>
             </td>
             <td>
-                <label data-bind="text: imageURL"></label>
-            </td>
-            <td >
-                <label data-bind="text: isChecked"></label>
+                <img class="dishImage" data-bind="attr: {src: imageURL}"/>
             </td>
             <td>
-                <input class="checkBoxInput" type="checkbox" data-bind="checked: isChecked"/>
+                <div>
+                    <input class="checkBoxInput" type="checkbox" data-bind="checked: isChecked"/>
+                </div>
+                <div>
+                    <input class="dishAmount" type="number" max="99" min="1" data-bind="value: amount, visible: isChecked">
+                </div>
             </td>
         </tr>
     </table>
-
-
+    <div hidden="hidden" class="elementToPopUp">You spend your money, thanks!</div>
+    <div class="totalPrice">
+        <button  class="buyButton" type="button" data-bind="click: total() > 0 ? buttonClick : null">Buy</button>
+        <label>Total: </label><label data-bind="text: total"></label>
+    </div>
 </body>
 </html>
 
+<script src="jquery-1.10.2.min.js"></script>
 <script src="knockout-3.1.0.js"></script>
+<script src="bpopup.jquery.json"></script>
+<script src="jquery.bpopup.min.js"></script>
 <script src="Dish.js"></script>
 <script src="DishManager.js"></script>

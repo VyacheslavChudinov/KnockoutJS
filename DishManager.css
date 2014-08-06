@@ -23,9 +23,41 @@ body{
 }
 
 .totalPrice{
-    margin-left: 50%;
     background-color: #E0E0E0;
     padding: 10px 30px;
     border-radius: 15px;
-    box-shadow: 0px 0px 6px 4px #FFF;
+    box-shadow: 1px 1px 1px 1px #999292;
+    position: fixed;
+    top: 130px;
+    left: 123px;
+}
+
+.dishImage{
+    height: 100px;
+}
+
+.buyButton{
+    position: fixed;
+    top: 50px;
+    left: 120px;
+    padding: 20px 40px;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+.buyButton:hover{
+    background-color: mediumturquoise;
+}
+.elementToPopUp{
+    width: 200px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.dishAmount{
+    width: 35px;
+    background-color: #63C563;
+    color: #B13F3F;
+    font-size: 16px;
 }
