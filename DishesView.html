@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
@@ -10,10 +10,10 @@
     <table data-bind="foreach: dishes">
         <tr data-bind="style: {'background-color': isChecked() ? '#666' : '#d0bffd'}">
             <td >
-                <label data-bind="text: name"></label>
+                <label data-bind="text: name, checkedColor: isChecked"></label>
             </td>
             <td>
-                <label data-bind="text: price, customBinding: isChecked"></label>
+                <label data-bind="text: '$' + price, checkedColor: isChecked"></label>
             </td>
             <td>
                 <img class="dishImage" data-bind="attr: {src: imageURL}"/>
@@ -31,7 +31,7 @@
     <div hidden="hidden" class="elementToPopUp">You spend your money, thanks!</div>
     <div class="totalPrice">
         <button  class="buyButton" type="button" data-bind="click: total() > 0 ? buttonClick : null">Buy</button>
-        <label>Total: </label><label data-bind="text: total"></label>
+        <label>Total: $</label><label data-bind="text: total"></label>
     </div>
 </body>
 </html>

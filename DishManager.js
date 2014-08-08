@@ -53,9 +53,34 @@ function dishesViewModel() {
 
     }
 }
-ko.applyBindings( new dishesViewModel() );
 
-ko.bindingHandlers.customBinding = {
-    init: function(element, valueAccessor){
+
+ko.bindingHandlers.checkedColor = {
+    init: function (element, valueAccessor) {
+        var value = ko.unwrap(valueAccessor());
+        if (value) {
+            $(element).css({
+                'color': '#fff'
+            });
+        } else {
+            $(element).css({
+                'color': '#000'
+            });
+        }
+    },
+
+    update: function (element, valueAccessor) {
+    var value = ko.unwrap(valueAccessor());
+    if (value) {
+        $(element).css({
+            'color': '#fff'
+        });
+    } else {
+        $(element).css({
+            'color': '#000'
+        });
     }
+}
 };
+
+ko.applyBindings(new dishesViewModel());
