@@ -1,6 +1,5 @@
-/**
- * Created by Администратор on 05.08.2014.
- */
+﻿'use strict';
+
 function Dish(name, price, imageURL) {
     this.name = name;
     this.price = price;

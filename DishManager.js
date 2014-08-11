@@ -1,3 +1,5 @@
+'use strict';
+
 var model = [
     new Dish('Heaven and Earth', 10, 'Images\\heaven.jpg'),
     new Dish('Charcuterie board', 20, 'Images\\charc.jpg'),
